@@ -37,7 +37,7 @@ helper_mode=""
 
 
 # test hfr helper mode
-if [ ${APATCH} = true ] && [ -f $MODDIR/skip_mount ] && [ -f $MODDIR/.hfr_found ]; then
+if [ ${APATCH} = true ] && [ -f $MODDIR/.hfr_found ]; then
 	target_hostsfile="/data/adb/hosts"
 	echo "[+] skkk's hosts_file_redirect found!"
 	echo "[+] running in helper mode"
