@@ -12,6 +12,7 @@ dmesg | grep "hosts_file_redirect" && {
 	chmod 644 /data/adb/hosts
 	touch $MODDIR/skip_mount
 	touch $MODDIR/.hfr_found
+	rm -rf $MODDIR/system
 }
 
 

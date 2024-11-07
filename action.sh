@@ -54,15 +54,15 @@ if [ -d /data/adb/modules/hostsredirect ] ; then
 	echo "[+] aviraxp's ZN-hostsredirect found!"
 	echo "[+] running in helper mode"
 	helper_mode=" | ZN-hostsredirect 💉"
-else
-	[ -f $MODDIR/skip_mount ] && {
+fi
+
+if [ -f $MODDIR/skip_mount ] && [ ! -d /data/adb/modules/hostsredirect ]; then
 		rm $MODDIR/skip_mount
 		echo "[-] reboot to restore operation"
 		string="description=status: 🚨 reboot required 🛠️"
 		sed -i "s/^description=.*/$string/g" $MODDIR/module.prop
 		sleep 5
 		exit 1
-	}
 fi	
 	
 if [ -w $target_hostsfile ] ; then
