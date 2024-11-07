@@ -61,6 +61,8 @@ if [ -f $MODDIR/skip_mount ] && [ ! -d /data/adb/modules/hostsredirect ] && [ ! 
 		echo "[-] reboot to restore operation"
 		string="description=status: 🚨 reboot required 🛠️"
 		sed -i "s/^description=.*/$string/g" $MODDIR/module.prop
+		mkdir -p $MODDIR/system/etc
+		echo "#" > $MODDIR/system/etc/hosts
 		sleep 5
 		exit 1
 fi	
