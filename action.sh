@@ -56,7 +56,7 @@ if [ -d /data/adb/modules/hostsredirect ] ; then
 	helper_mode=" | ZN-hostsredirect 💉"
 fi
 
-if [ -f $MODDIR/skip_mount ] && [ ! -d /data/adb/modules/hostsredirect ]; then
+if [ -f $MODDIR/skip_mount ] && [ ! -d /data/adb/modules/hostsredirect ] && [ ! -f $MODDIR/.hfr_found ]; then
 		rm $MODDIR/skip_mount
 		echo "[-] reboot to restore operation"
 		string="description=status: 🚨 reboot required 🛠️"
