@@ -35,6 +35,15 @@ done
 target_hostsfile="$MODDIR/system/etc/hosts"
 helper_mode=""
 
+
+# test hfr helper mode
+if [ ${APATCH} = true ] && [ -f $MODDIR/skip_mount ] && [ -f $MODDIR/.hfr_found ]; then
+	target_hostsfile="/data/adb/hosts"
+	echo "[+] skkk's hosts_file_redirect found!"
+	echo "[+] running in helper mode"
+	helper_mode=" | hosts_file_redirect 💉"
+fi
+
 # implement znhr helper mode, might as well do a pr on them later, that module can just use this script
 # https://github.com/aviraxp/ZN-hostsredirect
 # just use if found
