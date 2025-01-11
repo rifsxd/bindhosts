@@ -19,10 +19,10 @@ susfs_clone_perm "$MODDIR/system/etc/hosts" /system/etc/hosts
 # this assures that we have atleast a base operating operating_mode
 mode=0
 
-# ksu next 12010
+# ksu next 12183
 # ksu next added try_umount /system/etc/hosts recently
 # lets try to add it onto the probe
-if [ "$KSU_NEXT" = "true" ] && [ "$KSU_KERNEL_VER_CODE" -ge 12010 ]; then
+if [ "$KSU_NEXT" = "true" ] && [ "$KSU_KERNEL_VER_CODE" -ge 12183 ]; then
 	mode=6
 fi
 

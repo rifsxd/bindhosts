@@ -90,7 +90,7 @@
 ### ksu_source_mod
 - KernelSU try_umount assisted mount --bind
 - Requires source modification: [reference](https://github.com/tiann/KernelSU/commit/2b2b0733d7c57324b742c017c302fc2c411fe0eb)  
-- Supported on KernelSU NEXT 12010+ [reference](https://github.com/rifsxd/KernelSU-Next/commit/2fffdbb33ac12fcc33b1bc81db88b9b938656ec7)
+- Supported on KernelSU NEXT 12183+ [reference](https://github.com/rifsxd/KernelSU-Next/commit/9f30b48e559fb5ddfd088c933af147714841d673)
 - **WARNING**: Conflicts with SuSFS. You don’t need this if you can implement SuSFS.
 - Adaway compatible
 - Hiding: good method but you can probably just implement susfs.
